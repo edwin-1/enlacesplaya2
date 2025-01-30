@@ -1,0 +1,117 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.columna{
+    min-height: 85rem;
+    background-color: v.$terciario;
+    display: flex;
+    flex-direction: column;
+
+    &__heading{
+        margin-top: 5rem;
+        color: v.$blanco;
+        text-align: center;
+        font-size: 5rem;
+        line-height: 1;
+        font-style: italic;
+        span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 7rem;
+            font-weight: 900;
+        }
+    }
+
+    &__row{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+
+    &__contenido{
+        margin: 5px;
+    }
+
+    &__modem{
+        position: absolute;
+        left: -2rem;
+        bottom: -65rem;
+        width: 20rem;
+        height: auto;
+        transform: rotate(-5deg);
+    }
+
+    &__antena{
+        position: absolute;
+        width: 30rem;
+        left: 28rem;
+        height: auto;
+        transform: rotate(10deg);
+    }
+
+    &__wisp{
+        background-color: v.$verde;
+        color: v.$blanco;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        border-radius: 2rem;
+        position: absolute;
+        left: 27rem;
+        bottom: -33rem;
+        font-size: 2rem;
+        span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    }
+
+    &__muchacho{
+        position: absolute;
+        width: 95rem;
+        height: auto;
+        left: 55rem;
+        bottom: -67rem;
+    }
+
+    &__ahora{
+        background-color: v.$secundario;
+        position: absolute;
+        color: v.$blanco;
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        border-radius: 2rem;
+        left: 91.5rem;
+        bottom: -64rem;
+    }
+
+    &__optica{
+        position: absolute;
+        width: 60rem;
+        height: auto;
+        left: 130rem;
+    }
+
+    &__ftth{
+        background-color: v.$secundario;
+        color: v.$blanco;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        border-radius: 4rem;
+        position: absolute;
+        left: 150rem;
+        bottom: -20rem;
+        font-size: 3rem;
+        span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    }
+}

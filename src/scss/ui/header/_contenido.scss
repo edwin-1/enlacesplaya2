@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenidos{
+    background-image: url(/src/img/images/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    &__heading{
+        margin-top: 5rem;
+        color: v.$blanco;
+        text-align: center;
+        font-size: 5rem;
+        line-height: 1;
+        font-style: italic;
+        span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 7rem;
+            font-weight: 900;
+        }
+    }
+
+    &__grid{
+        margin-top: 2rem;
+        @include m.grid(2, 6rem);
+    }
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 6rem;
+
+    &__imagen{
+        width: 100%;
+        border-radius: 2rem;
+        transition-property: transform;
+        transition-duration: 400ms;
+        
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+
+    &__titulo{
+        font-size: 4rem;
+        font-weight: 700;
+        color: v.$blanco;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+}
